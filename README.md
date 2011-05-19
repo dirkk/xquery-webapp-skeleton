@@ -13,7 +13,7 @@ Usage
 To get the your application up and running 
 either clone this project:
 <code>
-$ git clone git@github.com:micheee/basex-web.git
+$ git clone https://micheee@github.com/micheee/xquery-webapp-skeleton.git
 </code> 
 Once cloned, change to the checked out project and run
 <code>
