@@ -16,6 +16,17 @@ declare option output:doctype-system "http://www.w3.org/TR/xhtml11/DTD/xhtml11.d
   }
   </div>
   <hr />
+  <h3>Source Code of the above example</h3>
+  <pre>
+    &lt;div id=&quot;container&quot;&gt;
+    &lt;h1&gt;Hello World.&lt;/h1&gt;
+    {{
+      1 to 10
+    }}
+    &lt;/div&gt;
+    
+  </pre>
+  <hr />
   <a href="index.html">&lt; Back to the inline XQuery Example</a>
 </body>
 </html>

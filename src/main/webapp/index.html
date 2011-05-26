@@ -8,16 +8,28 @@
 </head>
 
 <body>
-<?xq <h1>Hello World</h1> ?>
+<?xq 
+    <h1>Hello World.</h1>,
+    <p>{1 to 10}</p> ?>
 <p>
   You can now start implementing your own webapp.
 </p>
-<p>
-  Find this files in <code>src/main/webapp/index.html</code>
-</p>
+  <hr />
+<h3>Source Code of the above example</h3>
+<pre>
+  &lt;?xq 
+    &lt;h1&gt;Hello World&lt;/h1&gt;,
+    &lt;p&gt;{1 to 10}&lt;/p&gt; 
+  ?&gt;
+</pre>
 <hr />
 <?xq
   <a href="index.xq">Purely functional example ></a>
 ?>
+<hr />
+<p>
+  You will find these files in <code>src/main/webapp</code>
+</p>
+
 </body>
 </html>
