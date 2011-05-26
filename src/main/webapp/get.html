@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Hello World</title>
+	
+</head>
+
+<body>
+    <h1>Reading Request Parameters</h1>
+<p>
+  BaseX-Web provides a prefilled map named <code>$GET</code> that can be conveniently accessed.
+</p>
+<?xq
+  if(empty($GET("hello"))) then 
+    <p>$GET('hello') is not set: <a href="?hello=World">Click here to set</a>  <code>$GET('hello')</code></p>
+  else <p>$GET('hello') is {$GET('hello')}</p>
+?>
+
+
+  <hr />
+<h3>Source Code of the above example</h3>
+<pre>
+  &lt;?xq
+    if(empty($GET(&quot;hello&quot;))) then 
+      &lt;p&gt;$GET(&#x27;hello&#x27;) is not set: 
+          &lt;a href=&quot;?hello=World&quot;&gt;Click here to set&lt;/a&gt;  &lt;code&gt;$GET(&#x27;hello&#x27;)&lt;/code&gt;
+      &lt;/p&gt;
+    else 
+      &lt;p&gt;$GET(&#x27;hello&#x27;) is {$GET(&#x27;hello&#x27;)}&lt;/p&gt;
+  ?&gt;
+</pre>
+<hr />
+<?xq
+  <a href="index.xq">Purely functional example ></a>
+?>
+<hr />
+<p>
+  You will find these files in <code>src/main/webapp</code>
+</p>
+
+</body>
+</html>
