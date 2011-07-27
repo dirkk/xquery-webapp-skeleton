@@ -1,39 +1,28 @@
+<?xq
+import module namespace web="http://basex.org/lib/web";
+ web:redirect("/index.xq","")
+  ?>
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<title>Hello World</title>
+  <!-- <meta http-equiv="refresh" content="0; url=index.xq"> -->
+  
+	<title>Redirecting</title>
 	
 </head>
 
 <body>
-<?xq 
-    <h1>Hello World.</h1>,
-    <p>{1 to 10}</p> ?>
-<p>
-  You can now start implementing your own webapp.
-</p>
-  <hr />
-<h3>Source Code of the above example</h3>
-<pre>
-  &lt;?xq 
-    &lt;h1&gt;Hello World&lt;/h1&gt;,
-    &lt;p&gt;{1 to 10}&lt;/p&gt; 
-  ?&gt;
-</pre>
-<hr />
-<?xq
-  <a href="index.xq">Purely functional example ></a>
-?><br />
-<?xq
-  <a href="get.html">Reading <code>Request Parameters</code> ></a>
-?>
 
-<hr />
-<p>
-  You will find these files in <code>src/main/webapp</code>
-</p>
 
 </body>
 </html>
+<form action="index.xq" method="post" accept-charset="utf-8">
+  <label for="name">Your Name</label><input type="text" name="name" value="" id="name" /> 
+  <label for="message">Your Message</label><input type="text" name="message" value="" id="message" />
+  
+
+  <p><input type="submit" value="Continue →"></p>
+</form>

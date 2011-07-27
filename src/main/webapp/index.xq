@@ -1,32 +1,40 @@
+import module namespace gb = "http://basex.org/guests" at "src/main/webapp/lib/guestbook.xq";
+import module namespace web="http://basex.org/lib/web";
+
 declare option output:omit-xml-declaration "no";
 declare option output:method "xhtml";
 declare option output:include-content-type "yes";
 declare option output:doctype-public "-//W3C//DTD XHTML 1.1//EN";
 declare option output:doctype-system "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd";
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-  <title>DeepFS – Your files, your stuff </title>
+  <title>Guestbook Demo </title>
   <meta name="author" content="Michael Seiferle" />
+  <style type="text/css">
+  small {{ float:left; padding-right:5px;}}
+  </style>
 </head>
 <body>
+    {web:flash()}
   <div id="container">
-  <h1>Hello World.</h1>
-  {
-    1 to 10
-  }
+  <div class="form">
+  <h3>Add a new entry</h3>
+  <form action="add.xq" method="post" accept-charset="utf-8">
+    <label for="name">Your Name</label><br /><input type="text" name="name" value="" id="name" /> <br/>
+    <label for="message">Your Message</label><br />
+    <textarea name="message">Enter your message...</textarea>
+    <p><input type="submit" value="Continue →" /></p>
+  </form>
   </div>
-  <hr />
-  <h3>Source Code of the above example</h3>
-  <pre>
-    &lt;div id=&quot;container&quot;&gt;
-    &lt;h1&gt;Hello World.&lt;/h1&gt;
-    {{
-      1 to 10
-    }}
-    &lt;/div&gt;
-    
-  </pre>
-  <hr />
-  <a href="index.html">&lt; Back to the inline XQuery Example</a>
+  
+  <h1>Hello World.</h1>
+  <h2>Guestbook Demo Application</h2>
+  <div class="entries">
+    {
+        gb:list()
+    }
+  
+  </div>
+  </div>
 </body>
 </html>
