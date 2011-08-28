@@ -14,7 +14,7 @@
         <dependency>
             <groupId>org.basex</groupId>
             <artifactId>basex-web</artifactId>
-            <version>0.6.7.2-SNAPSOHT</version>
+            <version>0.6.72</version>
         </dependency> 
        <dependency>
             <groupId>junit</groupId>
