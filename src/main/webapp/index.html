@@ -1,6 +1,4 @@
 <?xq
-import module namespace web="http://basex.org/lib/web";
- web:redirect("/index.xq","")
   ?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -15,14 +13,7 @@ import module namespace web="http://basex.org/lib/web";
 </head>
 
 <body>
-
+<a href="/app/blog">Click here to view the blog</a>
 
 </body>
 </html>
-<form action="index.xq" method="post" accept-charset="utf-8">
-  <label for="name">Your Name</label><input type="text" name="name" value="" id="name" /> 
-  <label for="message">Your Message</label><input type="text" name="message" value="" id="message" />
-  
-
-  <p><input type="submit" value="Continue →"></p>
-</form>
