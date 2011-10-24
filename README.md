@@ -19,17 +19,52 @@ Once cloned, change to the checked out project and run
 <code>
 $ mvn jetty:run
 </code>
-this will fetch all needed packages and start a webserver at [localhost:8080](http://localhost:8080 "Inline XQuery in your Browser").
+this will fetch all needed java dependencies and start a webserver at [localhost:8080](http://localhost:8080 "XQuery").
 
+`basex-web` relies on two XQuery [packages](http://docs.basex.org/wiki/Packaging "Packaging - BaseX Documentation") to be installed.
+
+Some information on the basex-web XQuery API is provided in /api.html. 
+
+To install these run the following from inside BaseX:
+
+    REPO INSTALL /path/to/basex-web/src/main/webapp/basex-web-xq-1.0.1-distribution.zip
+    REPO INSTALL http://files.basex.org/xar/functx-1.0.xar    
 
 
 Source
 ------
 
-The source files that power your webapplication reside in `src/main/webapp`. 
+The source files that power your web application reside in `src/main/webapp`. 
+
+To get started have a look at these folders.
+
+URLs in basex-web are of the form: `/app/{$controller}/{$action}` where controller
+resembles a XQuery module named `{$controller}.xq` and `{$action}` maps to a XQuery file located in
+`views/{$controller}/{$action}.xq`.
+
+Each view has its containing controller automatically imported.
+
+So the url `/app/blog/index` would map to the XQuery script `/views/blog/index.xq`.
+
+Once the server evaluates the view's result, said result ist included into `/layouts/default.html` and returned to the user.
 
 
-`basex-web` is able to parse both, `*.htm(l)` files that contain *inline xquery* like  `<?xq 1 to 10 ?>` 
-as well as *.xq(y) files in pure functional mode.
-
-More documentation will be added soon.
+    .
+    ├── controllers
+    │   ├── blog.xq
+    ├── index.htm
+    ├── index.xq
+    ├── layouts
+    │   ├── ajax.html
+    │   ├── default.html
+    ├── lib
+    │   └── form.xqy
+    ├── models
+    │   ├── blog.rng
+    │   └── blog.xml
+    ├── views
+        └── blog
+            ├── comment.xq
+            ├── index.xq
+            ├── scaffold.xq
+            └── index.xq
