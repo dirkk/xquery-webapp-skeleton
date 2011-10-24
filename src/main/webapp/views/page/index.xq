@@ -9,15 +9,22 @@ import module namespace web="http://basex.org/lib/web";
     <h3>Core Componenets</h3>
     <dl>
       <dt>Models</dt>
-      <dd>…</dd>
+      <dd>containing the source data to initially preload the database.</dd>
       <dt>Views</dt>
-      <dd>…</dd>
+      <dd>Contain information on how the render which URL</dd>
       <dt>Controllers</dt>
-      <dd>…</dd>
+      <dd>contain the business logic</dd>
     </dl>
     
-    
-    
+    <hr />
+    <p>URLs in basex-web are of the form: <code>/app/{{$controller}}/{{$action}}</code> where controller
+    resembles a XQuery module named <code>{{$controller}}.xq</code> and <code>{{$action}}</code> maps to a XQuery file located in
+    <code>views/{{$controller}}/{{$action}}.xq</code>.</p>
+
+    <p>Each view has its containing controller automatically imported.</p>
+
+    <p>So the url <code>/app/blog/index</code> would map to the XQuery script <code>/views/blog/index.xq</code>.</p>
+    <hr />
     <h2>Mini Example</h2>
     <p>The following list is generated dynamically by <a href="http://basex.org" target="_blank">BaseX</a>:</p>
     <ul>
