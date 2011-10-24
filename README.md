@@ -51,20 +51,11 @@ Once the server evaluates the view's result, said result ist included into `/lay
 
     .
     ├── controllers
-    │   ├── blog.xq
-    ├── index.htm
-    ├── index.xq
+    │   └── blog.xq
     ├── layouts
-    │   ├── ajax.html
-    │   ├── default.html
-    ├── lib
-    │   └── form.xqy
+    │   └── default.html
     ├── models
-    │   ├── blog.rng
     │   └── blog.xml
     ├── views
         └── blog
-            ├── comment.xq
-            ├── index.xq
-            ├── scaffold.xq
             └── index.xq
