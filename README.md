@@ -30,6 +30,11 @@ To install these run the following from inside BaseX:
     REPO INSTALL /path/to/basex-web/src/main/webapp/basex-web-xq-1.0.1-distribution.zip
     REPO INSTALL http://files.basex.org/xar/functx-1.0.xar    
 
+API
+---
+
+* You will find some API functionality descriptionos in /api.html
+* You can access REQUEST parameters `$GET` & `$POST`, e.g. ?name=foo leads for 'foo' to be found `$GET('name')`
 
 Source
 ------
