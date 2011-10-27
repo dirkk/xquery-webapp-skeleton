@@ -6,3 +6,9 @@ declare function books:list(){
         order by $book/title
     return $book
 };
+declare function books:list-by-name($name){
+    for $book in doc('src/main/webapp/models/books.xml')//book
+        where starts-with($book/title,$name)
+        order by $book/title
+    return $book
+};
