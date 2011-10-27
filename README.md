@@ -53,6 +53,9 @@ So the url `/app/blog/index` would map to the XQuery script `/views/blog/index.x
 
 Once the server evaluates the view's result, said result ist included into `/layouts/default.html` and returned to the user.
 
+If the server receives a request containing the "X-Requested-With" (common in AJAX calls) the default.html is replaced by ajax.html
+to provide an empty template for ajax requests.
+
 
     .
     ├── controllers
