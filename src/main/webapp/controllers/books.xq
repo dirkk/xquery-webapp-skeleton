@@ -1,11 +1,19 @@
-module namespace books = "http://www.basex.org/myapp/books";
-import module namespace web="http://basex.org/lib/web";
+module namespace books          = "http://www.basex.org/myapp/books";
+import module namespace web     = "http://basex.org/lib/web";
+import module namespace model  = "http://basex.org/lib/booksmodel" at "src/main/webapp/models/booksmodel.xq";
 
 declare function books:list(){
-    for $book in doc('src/main/webapp/models/books.xml')//book
+    for $book in model:find-all()
         order by $book/title
     return $book
 };
+declare function books:find-by-author($name) as element(*)*{
+	model:find-by-author($name)
+};
+declare function books:find-by-name($name) as element(*)*{
+	model:find-by-name($name)
+};
+
 declare function books:list-by-name($name){
     for $book in doc('src/main/webapp/models/books.xml')//book
         where starts-with($book/title,$name)

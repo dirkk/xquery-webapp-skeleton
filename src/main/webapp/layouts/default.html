@@ -1,44 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Title</title>
-	<link rel="stylesheet" href="/webroot/css/screen.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-	<link rel="stylesheet" href="/webroot/css/print.css" type="text/css" media="print" title="Print CSS" charset="utf-8" /> 
-  <!--[if IE]>
-	<link rel="stylesheet" href="../webroot/css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-	<![endif]-->
-  <link rel="stylesheet" href="/webroot/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js" djConfig="parseOnLoad: true"><![CDATA[
-  ]]>
-  </script>
-  <script type="text/javascript">
-  <![CDATA[
-  ]]>
-  
-  </script>
-  
-</head>
+    <meta charset="utf-8" />
+    <title>BaseX-Web — Welcome to XML Prague </title>
+    
+    <meta name="description" content="BaseX-Web is an XQuery web framework based on an uniform technology stack.">
+    <meta name="author" content="Michael Seiferle, BaseX Team" />
 
+    <link rel="stylesheet" href="/webroot/impress.js/css/basex-web.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+    
+    <link href="/webroot/impress.js/css/impress-demo.css" rel="stylesheet" />
+    <!--
+        
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+        
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+        
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        don't we?
+        
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+        
+    -->
+
+</head>
 <body>
-  <div class="container">
-    <div class="span-16 ">
-      {{$content}}
-    </div>
-    <div class="span-8 last">
-      <h3>Getting started</h3>
-      <ul>
-        <li><a href="/app/page/">First steps</a></li>
-        <li><a href="/app/books/">The books list</a></li>
-        <!-- <li><a href="/app/page/">What &amp; Where?</a></li>
-        <li><a href="/app/page/">XQuery module documentation</a></li>
-        <li><a href="/app/page/">Technical Overview</a></li>
-        <li><a href="/app/page/">Further reading</a></li> -->
-      </ul>
-      
-    </div>
+
+<!--
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    It's worth to notice the `impress-not-supported` class. This class means, that browser doesn't
+    support features required by impress.js, so you can apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    The class name on this element also depends on currently active presentation step. More details about
+    it can be found below, when `hint` element is being described.
+    
+-->
+<div id="impress" class="impress-not-supported">
+{{$content}}
 </div>
-</body>
-</html>
+<script src="/webroot/impress.js/js/impress.js"></script>
+</body></html>
